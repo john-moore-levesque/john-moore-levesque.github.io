@@ -6,6 +6,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <style>
+            #readme {
+                text-align: left;
+                max-width: fit-content;
+                margin: auto;
+            }
+            li {
+                font-size: 0.9em;
+                list-style: none;
+            }
             .roboto-thin {
             font-family: "Roboto", sans-serif;
             font-weight: 100;
@@ -99,19 +108,21 @@
     <body>
         <div id="wrapper">
 
-            <h1 class="roboto-thin">What are we reading today?</h1>
-            <div class="roboto-thin" id="readme">
+            <h1 class="roboto-medium">What are we reading today?</h1>
+            <div class="roboto-light" id="readme">
                 <p>Not sure what you want to read next?</p>
                 <p>Click the button below to figure out what to get on your next trip to the library!</p>
                 <p>You'll get the following:</p>
                 <p>
                     <ul>
-                        <li>A category (a number from 100 to 700, or FIC for fiction) and a description</li>
+                        <li>A category (a number from 100 to 900, or FIC for fiction) and a description</li>
                         <li>A subcategory and a description</li>
                         <li>For non-fiction, pick the nth book on the stack</li>
                         <li>For fiction, the first letter of the author's last name</li>
                     </ul>
-    
+                <p>The 800 range is fiction and literature, so your library might not have a separate section.</p> 
+                <p>Treat it as a wildcard, find something interesting in fiction that you wouldn't normally read, or just try your luck again.</p>
+                <p>In general, if your library doesn't have a book in the subcategory, pick something close by!</p>
                 </p>
 
             </div>
@@ -167,9 +178,9 @@
             }
 
             randomCodeContainer.innerHTML = 
-                "<h2 class=\"roboto-thin\">" + classification + ": " + description + "</h2>" +
-                "<p class=\"roboto-thin\">" + dewey + ": " + desc + "</p>" + 
-                "<p class=\"roboto-thin\">" + book + "</p>";
+                "<h2 class=\"roboto-light\">" + classification + ": " + description + "</h2>" +
+                "<p class=\"roboto-light\">" + dewey + ": " + desc + "</p>" + 
+                "<p class=\"roboto-light\">" + book + "</p>";
         }
     </script>
 </html>
